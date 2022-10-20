@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+ 
+   
+    <context:annotation-config />
+    
+    <bean class="com.spring.project.test.Address" name="address">
+    	<property name="landmark" value="Tolichowki"></property>
+    	<property name="zipcode" value="500008"></property>
+    </bean>
+    <bean class="com.spring.project.test.Address" name="address3">
+    	<property name="landmark" value="Mehdipatnam"></property>
+    	<property name="zipcode" value="500028"></property>
+    </bean>
+    <bean class="com.spring.project.test.Test" name="test" autowire="constructor">
+    	<constructor-arg value="Syed Hamed"></constructor-arg>
+    </bean>
+</beans>

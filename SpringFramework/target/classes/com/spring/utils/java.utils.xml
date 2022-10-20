@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    ">
+ 
+   <util:list list-class="java.util.ArrayList" id="person_friends">
+   <value>Faraz </value>
+   <value>Fahad </value>
+   
+   </util:list>
+    <util:set set-class="java.util.HashSet" id="person_contacts">
+    	<value>7778745</value>
+    	<value>7546445</value>
+    
+    </util:set>
+  	<bean class="com.spring.utils.Person" id="person">
+  		<property name="name" value="Syed Hamed"></property>
+  		<property name="age" value="23"></property>
+  		<property name="friends" ref="person_friends"></property>
+  		<property name="contacts" ref="person_contacts"></property>
+  	
+  	</bean>
+</beans>

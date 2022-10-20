@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+
+<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+<property name="message" value="Hello World!"/>
+</bean>
+<bean id="addition" class="net.secondTry.Add" scope="singleton">
+<property name="a" value="10"></property>
+<property name="b" value="10"></property>
+</bean>
+
+<!--
+<bean id="message" class="com.lifecycle.HelloWorld" init-method="initialize" destroy-method="destroyed"> 
+</bean>
+<bean class="com.lifecycle.InitHelloWorld"/> 
+
+<bean id="te" class="spring.di.TextEditor">
+
+<constructor-arg ref="spellcheck"/>
+<constructor-arg ref="testGrammer"/>
+
+<constructor-arg value="20" index="3" ></constructor-arg>
+<constructor-arg value="10"  ></constructor-arg>
+
+<property name="spellChecker" ref="spellcheck"></property>
+<property name="grammer" ref="testGrammer"></property>
+<property name="num" value="100"></property>
+<property name="num2" value="200"></property>
+</bean>
+<bean name="spellcheck" class="spring.di.SpellChecker"></bean>
+<bean name="testGrammer" class="spring.di.Grammer"></bean>
+-->
+<bean id="student" class="com.SpringAnnotation.Student">
+	<property name="name" value="Syed Hamed"></property>
+	<property name="age" ><value>10</value></property>
+</bean>
+<context:annotation-config/>
+</beans>
